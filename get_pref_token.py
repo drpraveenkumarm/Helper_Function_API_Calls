@@ -1,3 +1,10 @@
+import pandas as pd
+import requests
+from pandas.io.json import json_normalize
+from requests.auth import HTTPBasicAuth
+authentication = HTTPBasicAuth('','')
+
+
 def get_pref_token(string, version = "v1_6_5_patch_1"):
     url = "https://preview.nferx.com/nucleus-api/v2/get_entities_for_token?fold_related=1&token_info=attributes%2Curl%2Chighest_priority_type%2Csources_claiming_synonym&token_sources=1&?"
     params = {
